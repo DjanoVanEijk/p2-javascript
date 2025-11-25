@@ -1,7 +1,6 @@
 console.log("hello")
 
-//pak de titel
-document.getElementById("1c")
+document.getElementById("1c").textContent = "Javascript2"
 
 //maak hem rood
-document.getElementById("1c").style.color = "red";
+document.getElementById("1c").style.color = "red"
