@@ -7,13 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 <body>
-    <div class="pizzaflex">
+    <div id="pizzamenu" class="pizzaflex">
         <h1 id="pizzacounter">??? Pizzas</h1>
-        <p>Welkom bij pizza clicker!</p>
+        <p id="text">Welkom bij pizza clicker!</p>
         <img src="img/Pizza.png" alt="Pizza">
-        <button onclick="addpizza()">Pizza!</button>
+        <button onclick="addpizza(), update()">Pizza!</button>
 </div>
 
+<div id="retrynow" class="retrynow">
+<h1>YOU WON!</h1>
+<button onclick="retry()">retry now!</button>
+</div>
 
 </body>
 </html>
