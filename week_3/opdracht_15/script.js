@@ -1,35 +1,34 @@
 let counter = 0;
+const redBullCounter = document.getElementById("id");
 
 function plus() {
-  counter = counter + 1;
+  counter++;
+  update();
 }
 
 function min() {
-  counter = counter - 1;
+  counter = Math.max(0, counter - 1);
+  update();
 }
+
 
 function reset() {
   counter = 0;
+  update();
 }
 
+function update() {
+  let message = counter;
+  let color = "green";
 
-function update(){
-if (counter < 0){
-counter = counter + 1;
-}
+  if (counter >= 5) {
+    message = `${counter}, Pauze? Water is ook lekker`;
+    color = "red";
+  } else if (counter >= 3) {
+    message = `${counter}, dat zijn er best veel…`;
+    color = "orange";
+  }
 
-if (counter >= 3){
-document.getElementById("id").innerHTML = counter + " Red Bulls, dat zijn er best veel…"
-document.getElementById("id").style.color = "orange"
-}
-
-if (counter >= 5){
-document.getElementById("id").innerHTML = counter + " Red Bulls, Pauze? Water is ook lekker"
-document.getElementById("id").style.color = "red"
-}
-
-if (counter < 3){
-document.getElementById("id").innerHTML = counter + " Red Bulls"
-document.getElementById("id").style.color = "green"
-}
+  redBullCounter.innerHTML = message;
+  redBullCounter.style.color = color;
 }
