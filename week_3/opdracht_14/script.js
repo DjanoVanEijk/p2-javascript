@@ -17,5 +17,3 @@
       document.getElementById("id").style.color = "black";
     }
 
-drinken()
-
