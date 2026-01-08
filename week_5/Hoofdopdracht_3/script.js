@@ -14,5 +14,6 @@ else{
 let randomIndex = Math.floor(Math.random() * fortune.length);
 let randomFortune = fortune[randomIndex];
 document.getElementById("id").innerHTML = randomFortune
-}}
+}
+}
     
